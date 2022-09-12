@@ -31,16 +31,6 @@ const main = async()=>{
     
     } catch (err) {
         console.log(err);
-        let tries = 0;
-        const interval = setInterval(()=>{
-            tries++;
-            console.log(tries);
-            if (tries >= 3) {
-                clearInterval(interval);
-                process.exit(1);
-            }
-            main();
-        }, 3000)
     }
 };
 main();
