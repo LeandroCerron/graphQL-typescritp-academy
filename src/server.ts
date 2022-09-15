@@ -16,7 +16,7 @@ const main = async()=>{
             schema,
             introspection: true
         });
-        await server.start()
+        await server.start();
         server.applyMiddleware({app});
         app.get('/', expressPlayGround({
             endpoint: '/graphql'
@@ -25,7 +25,7 @@ const main = async()=>{
         console.clear();
         const port = process.env.PORT || 3000;
         const httpServer = createServer(app);
-        httpServer.listen(port, ()=>{
+        httpServer.listen(port, () => {
             console.log(`http://localhost:${port}`);
         });
     

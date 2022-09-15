@@ -11,8 +11,8 @@ type Query {
 
 type Mutation {
     addCourse(course: CourseInput!): Course!
-    updateCourse(course: CourseInput!, id: ID!): Course!
-    deleteCourse(id: ID!): Course!
+    updateCourse(course: CourseInput!): Course!
+    deleteCourse(id: ID!): [Course!]!
 }
 
 input CourseInput {
